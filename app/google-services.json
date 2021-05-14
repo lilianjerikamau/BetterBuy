@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "389051164768",
+    "project_id": "betterbuy-ff189",
+    "storage_bucket": "betterbuy-ff189.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:389051164768:android:af0b8bfca953a5f9e6bb05",
+        "android_client_info": {
+          "package_name": "com.example.betterbuy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "389051164768-sosvbua7590du177jqvotsjodevttea9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.betterbuy",
+            "certificate_hash": "fc5424b492cd895e1277ff4b40aba81e18205298"
+          }
+        },
+        {
+          "client_id": "389051164768-khqbu8878ev6p02gr7s20gc15skr7nsi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqA_reQKHInH1TcyvKm_rypfVrSR26txQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "389051164768-khqbu8878ev6p02gr7s20gc15skr7nsi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
