@@ -7,7 +7,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import retrofit2.Call;
+
 public class HomeActivity extends AppCompatActivity {
+    TweeterApi client = TweeterClient.getClient();
+
 
 private Button LogoutBtn;
     @Override
