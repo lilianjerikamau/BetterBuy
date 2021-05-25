@@ -2,4 +2,6 @@
     <string name="app_name">BetterBuy</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Api_Key">r0bCRah6RVZk6mo0ZcpFdyRuI</string>
+    <string name="Api_Secret">AFHGXt9WUhCNBuHrnd5T1PlYd5xJ4d1ck2wzZ1OKUd2omfF9Ag</string>
 </resources>
