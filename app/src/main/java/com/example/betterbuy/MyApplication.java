@@ -16,6 +16,8 @@ public class MyApplication extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        setContentView(R.layout.activity_my_application);
+
 
         //initiate Twitter config
         TwitterConfig config = new TwitterConfig.Builder(this)
@@ -24,6 +26,8 @@ public class MyApplication extends AppCompatActivity {
                 .debug(true)
                 .build();
         Twitter.initialize(config);
+
         setContentView(R.layout.activity_my_application);
+
     }
 }
