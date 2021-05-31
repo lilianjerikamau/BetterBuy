@@ -1,20 +1,20 @@
 package Model;
 
-import java.util.Objects;
-
 public class Users {
-    private String name,phone,password;
+    private String name, phone, password, image, address;
 
-    public Users()
-    {
+    public Users() {
 
     }
 
-    public Users(String name, String phone, String password) {
+    public Users(String name, String phone, String password, String image, String address) {
         this.name = name;
         this.phone = phone;
         this.password = password;
+        this.image = image;
+        this.address = address;
     }
+
 
     public String getName() {
         return name;
@@ -40,5 +40,7 @@ public class Users {
         this.password = password;
     }
 
-
+    public String getImage() {
+        return image;
+    }
 }

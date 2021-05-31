@@ -45,7 +45,7 @@ public class TwitterLoginActivity extends AppCompatActivity {
                 .build();
         Twitter.initialize(twitterConfig);
 
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_twitter_login);
 
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
@@ -57,7 +57,7 @@ public class TwitterLoginActivity extends AppCompatActivity {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth){
                 if (firebaseAuth.getCurrentUser() != null){
-                    startActivity(new Intent(TwitterLoginActivity.this, MainActivity.class));
+                    startActivity(new Intent(TwitterLoginActivity.this, HomeActivity.class));
                 }
             }
         };
@@ -102,9 +102,9 @@ public class TwitterLoginActivity extends AppCompatActivity {
     }
 
     private void updateUI() {
-        Toast.makeText(TwitterLoginActivity.this, "You're logged in", Toast.LENGTH_LONG);
+        Toast.makeText(TwitterLoginActivity.this, "You're logged in", Toast.LENGTH_LONG).show();
         //Sending user to new screen after successful login
-        Intent mainActivity = new Intent(TwitterLoginActivity.this, TwitterLoginActivity.class);
+        Intent mainActivity = new Intent(TwitterLoginActivity.this, HomeActivity.class);
         startActivity(mainActivity);
         finish();
     }
