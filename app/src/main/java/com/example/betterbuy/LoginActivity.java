@@ -2,6 +2,7 @@ package com.example.betterbuy;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -22,6 +23,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.TwitterAuthProvider;
+import com.google.firebase.auth.UserInfo;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -54,10 +56,6 @@ private String parentDbName = "users";
     private TwitterLoginButton mTwitterBtn;
     private ProgressBar mIndeterminateProgressBar;
     private CheckBox chkBoxRememberMe;
-//    private FirebaseAuth mAuth;
-//    private FirebaseAuth.AuthStateListener mAuthListener;
-//    private TwitterLoginButton mTwitterBtn;
-//    private ProgressBar mIndeterminateProgressBar;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -91,7 +89,20 @@ private String parentDbName = "users";
         mAuthListener = new FirebaseAuth.AuthStateListener(){
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth){
+                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                 if (firebaseAuth.getCurrentUser() != null){
+                    for (UserInfo profile : user.getProviderData()) {
+                        // Id of the provider (ex: google.com)
+                        String providerId = profile.getProviderId();
+
+                        // UID specific to the provider
+                        String uid = profile.getUid();
+
+                        // Name, email address, and profile photo Url
+                        String name = profile.getDisplayName();
+                        String email = profile.getEmail();
+                        Uri photoUrl = profile.getPhotoUrl();
+                    }
                     startActivity(new Intent(LoginActivity.this, HomeActivity.class));
                 }
             }
@@ -268,6 +279,7 @@ private String parentDbName = "users";
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if (currentUser != null) {
             updateUI();
+
         }
         mAuth.addAuthStateListener(mAuthListener);
     }
