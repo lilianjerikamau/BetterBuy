@@ -43,8 +43,11 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.cepheuen.elegant-number-button:lib:1.0.2'
+
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'com.google.firebase:firebase-storage:20.0.0'
+     implementation 'com.theartofdev.edmodo:android-image-cropper:2.8.+'
     implementation 'androidx.drawerlayout:drawerlayout:1.1.1'
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.1'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1'
@@ -65,7 +68,11 @@ dependencies {
     implementation 'com.google.firebase:firebase-core:19.0.0'
     implementation 'com.google.firebase:firebase-auth:21.0.1'
     //noinspection GradleCompatible
+    implementation 'com.android.support:design:27.1.1'
+    //noinspection GradleCompatible
     implementation 'com.android.support:appcompat-v7:25.3.1'
+
+
     //noinspection GradleCompatible
 //    implementation 'com.android.support:design-v7:25.3.1'
     //noinspection GradleCompatible

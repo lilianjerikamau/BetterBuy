@@ -1,6 +1,7 @@
 package com.example.betterbuy;
 
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -12,7 +13,6 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.rey.material.widget.ImageView;
 import com.squareup.picasso.Picasso;
 
 import org.jetbrains.annotations.NotNull;
@@ -40,14 +40,14 @@ public class ProductDetailsActivity extends AppCompatActivity {
         productDescription = (TextView) findViewById(R.id.product_description_details);
         productPrice = (TextView) findViewById(R.id.product_price_details);
 
-        getProductDEtails(productID);
+        getProductDetails(productID);
 
 
     }
 
-    private void getProductDEtails(String productID)
+    private void getProductDetails(String productID)
     {
-        DatabaseReference productRef = FirebaseDatabase.getInstance().getReference().child("products");
+        DatabaseReference productRef = FirebaseDatabase.getInstance().getReference().child("Products");
         productRef.child(productID).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {

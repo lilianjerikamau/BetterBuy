@@ -77,7 +77,20 @@ public class HomeActivity extends AppCompatActivity
         TextView userNameTextView = headerView.findViewById(R.id.user_profile_name);
         CircleImageView profileImageView = headerView.findViewById(R.id.user_profile_image);
 
-//        userNameTextView.setText(Prevalent.currentOnlineUser.getName());
+
+
+
+
+
+
+//
+//        String UserPhoneKey = Prevalent.currentOnlineUser.getPhone();
+//        String UserPasswordKey = Prevalent.currentOnlineUser.getPassword();
+//
+//        if (!UserPhoneKey.equals("") && !UserPasswordKey.equals("")) {
+//            userNameTextView.setText(Prevalent.currentOnlineUser.getName());
+//
+//            }
 
 
         recyclerView = findViewById(R.id.recycler_menu);
@@ -108,6 +121,14 @@ public class HomeActivity extends AppCompatActivity
                         holder.txtProductDescription.setText(model.getDescription());
                         holder.txtProductPrice.setText("Price = " + model.getPrice() + "$");
                         Picasso.get().load(model.getImage()).into(holder.imageView);
+                        holder.itemView.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                Intent intent =new Intent(HomeActivity.this,ProductDetailsActivity.class);
+                                intent.putExtra("pid",model.getPid());
+                                startActivity(intent);
+                            }
+                        });
                     }
 
                     @NonNull
@@ -185,7 +206,8 @@ public class HomeActivity extends AppCompatActivity
         }
         else if (id == R.id.nav_settings)
         {
-
+            Intent intent = new Intent(HomeActivity.this, SettingActivity.class);
+            startActivity(intent);
         }
         else if (id == R.id.nav_logout)
         {
