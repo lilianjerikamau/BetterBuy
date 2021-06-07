@@ -7,10 +7,10 @@ This is an android ecommerce application that allows users to purchase items onl
 [Lilian Kamau](https://github.com/lilianjerikamau/lilianjerikamau.github.io)
 
 ## Setup Instructions
-To run the application, first install the java development kit from https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
-Install gradle.
-Next clone the project using $ git clone https://github.com/lilianjerikamau/BetterBuy.git to your preferred folder.
-Run the application on Android Studio.
+*Install the java development kit from https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+*Install gradle.
+*clone the project using $ git clone https://github.com/lilianjerikamau/BetterBuy.git to your preferred folder.
+*Run the application on Android Studio.
 
 
 ## Contributing
