@@ -22,6 +22,7 @@ We use Github for versioning. This is the first version of this application
 This project was generated with
 * Java 
 * Android Studio
+* Firebase Database
 
 ## Live Demo
 
